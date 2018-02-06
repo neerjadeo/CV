@@ -14,92 +14,89 @@
 %
 
 
-%-------------------------------------------------------------------------------
-% CONFIGURATIONS
-%-------------------------------------------------------------------------------
-% A4 paper size by default, use 'letterpaper' for US letter
-\documentclass[11pt, a4paper]{awesome-cv}
+% ___________________________________________________________________________
+% CONFIGURATION
 
-% Configure page margins with geometry
+% Check awesome-cv.cls for all of the special functions.
+\documentclass[11pt, letterpaper]{awesome-cv}
+
+% Configure page margins
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
 % Color for highlights
-% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
-%                 awesome-nephritis, awesome-concrete, awesome-darknight
+% Builtin:
+%   awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%   awesome-nephritis, awesome-concrete, awesome-darknight
+% Custom:
+%   \definecolor{awesome}{HTML}{CA63A8}
 \colorlet{awesome}{awesome-red}
-% Uncomment if you would like to specify your own color
-% \definecolor{awesome}{HTML}{CA63A8}
 
 % Colors for text
-% Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
-% \definecolor{graytext}{HTML}{5D5D5D}
-% \definecolor{lighttext}{HTML}{999999}
+\definecolor{darktext}{HTML}{414141}
+\definecolor{text}{HTML}{333333}
+\definecolor{graytext}{HTML}{5D5D5D}
+\definecolor{lighttext}{HTML}{999999}
 
-% Set false if you don't want to highlight section with awesome color
+% Set to false to disable section highlight
 \setbool{acvSectionColorHighlight}{true}
 
-% If you would like to change the social information separator from a pipe (|) to something else
+% Set the social information separator to a textbar (|)
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
-%-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
+% ___________________________________________________________________________
+% PERSONAL INFORMATION
+
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
-\name{Byungjin}{Park}
-\position{Software Engineer{\enskip\cdotp\enskip}Security Expert}
-\address{246-1002, Gwangmyeongmayrouge Apt. 86, Cheongna lime-ro, Seo-gu, Incheon-si, 404-180, Rep. of KOREA}
+%\photo[rectangle,edge,right]{./profile}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \extrainfo{extra informations}
+\name{Chris}{Barrick}
+\position{A.I. Software Engineer{\enskip\cdotp\enskip}Data Scientist}
+\address{Athens, GA}
 
-\quote{``Be the change that you want to see in the world."}
+\mobile{(828) 342-2580}
+\email{cbarrick1@gmail.com}
+\github{cbarrick}
+\linkedin{csb1024}
+
+% Supported but unused:
+%\homepage{URL}
+%\gitlab{gitlab-id}
+%\stackoverflow{SO-id}{SO-name}
+%\twitter{@twit}
+%\skype{skype-id}
+%\reddit{reddit-id}
+%\extrainfo{extra informations}
+
+\quote{``Write programs that do one thing and do it well. Write programs to work together."}
 
 
-%-------------------------------------------------------------------------------
+% ___________________________________________________________________________
+% Content
+
 \begin{document}
 
 % Print the header with above personal informations
-% Give optional argument to change alignment(C: center, L: left, R: right)
+% The argument changes alignment (C: center, L: left, R: right)
 \makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Resume sections are independent files.
+%\input{resume/summary.tex}
+\input{resume/skills.tex}
+\input{resume/experience.tex}
+\input{resume/education.tex}
+\input{resume/organizations.tex}
+\input{resume/projects.tex}
+\input{resume/publications.tex}
+
+% Print the footer with 3 arguments (<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Claud D. Park~~~·~~~Résumé}
+  {Chris Barrick~~~·~~~Résumé}
   {\thepage}
 
-
-%-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
-\input{resume/education.tex}
-\input{resume/extracurricular.tex}
-
-
-%-------------------------------------------------------------------------------
 \end{document}
