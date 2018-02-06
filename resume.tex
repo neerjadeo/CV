@@ -83,6 +83,13 @@
 % The argument changes alignment (C: center, L: left, R: right)
 \makecvheader[C]
 
+% Print the footer with 3 arguments (<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Chris Barrick~~~·~~~Résumé}
+  {\thepage}
+
 % Resume sections are independent files.
 %\input{resume/summary.tex}
 \input{resume/skills.tex}
@@ -91,12 +98,5 @@
 \input{resume/organizations.tex}
 \input{resume/projects.tex}
 \input{resume/publications.tex}
-
-% Print the footer with 3 arguments (<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Chris Barrick~~~·~~~Résumé}
-  {\thepage}
 
 \end{document}
