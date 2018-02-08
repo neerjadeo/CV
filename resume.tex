@@ -48,13 +48,21 @@
 
 
 % ___________________________________________________________________________
+% MACROS
+
+% Custom commands for URLs without protocol prefixes
+\newcommand*{\httpurl}[1]{\href{http://#1}{\nolinkurl{#1}}}
+\newcommand*{\httpsurl}[1]{\href{https://#1}{\nolinkurl{#1}}}
+
+
+% ___________________________________________________________________________
 % PERSONAL INFORMATION
 
 % Available options: circle|rectangle,edge/noedge,left/right
 %\photo[rectangle,edge,right]{./profile}
 
 \name{Chris}{Barrick}
-\position{A.I. Software Engineer{\enskip\cdotp\enskip}Data Scientist}
+\position{A.I. Systems Engineer{\enskip\cdotp\enskip}Data Scientist}
 \address{Athens, GA}
 
 \mobile{(828) 342-2580}
@@ -75,7 +83,7 @@
 
 
 % ___________________________________________________________________________
-% Content
+% CONTENT
 
 \begin{document}
 
@@ -96,6 +104,7 @@
 \input{resume/experience.tex}
 \input{resume/education.tex}
 \input{resume/organizations.tex}
+\pagebreak
 \input{resume/projects.tex}
 \input{resume/publications.tex}
 
