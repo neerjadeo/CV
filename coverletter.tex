@@ -46,6 +46,9 @@
 % Set the social information separator to a textbar (|)
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+% Support for embedding the resume into this cover letter.
+\usepackage{pdfpages}
+
 
 % ___________________________________________________________________________
 % PERSONAL INFORMATION
@@ -54,7 +57,7 @@
 %\photo[rectangle,edge,right]{./profile}
 
 \name{Chris}{Barrick}
-\position{A.I. Systems Engineer{\enskip\cdotp\enskip}Data Scientist}
+\position{Software Engineer{\enskip\cdotp\enskip}Data Scientist}
 \address{Athens, GA}
 
 \mobile{(828) 342-2580}
@@ -80,14 +83,14 @@
 
 % The company being applied to
 \recipient
-  {Watson Advertising Team}
-  {The Weather Company\\1001 Summit Blvd NE\\Brookhaven, GA 30319}
+  {TCGPlayer.com}
+  {~}
 
 % The date on the letter, default is the date of compilation
 \letterdate{\today}
 
 % The title of the letter
-\lettertitle{Job Application for Knowledge Engineer}
+\lettertitle{Job Application for Data Engineer in Atlanta}
 
 % How the letter is opened
 \letteropening{Dear Hiring Manager,}
@@ -96,7 +99,7 @@
 \letterclosing{Sincerely,}
 
 % Any enclosures with the letter
-\letterenclosure[Attached]{Curriculum Vitae}
+% \letterenclosure[Attached]{Curriculum Vitae}
 
 
 % ___________________________________________________________________________
@@ -112,7 +115,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Chris Barrick~~~·~~~Résumé}
+  {Chris Barrick~~~·~~~Cover Letter}
   {\thepage}
 
 % Print the title with above letter informations
@@ -121,15 +124,15 @@
 \begin{cvletter}
 
 \lettersection{About Me}
-This letter is to express my interest in your recent opening for a knowledge engineer in the Atlanta area. With Bachelor's degrees in both Computer and Cognitive Science, multiple internships, and a Master's in Artificial Intelligence in progress, I am confident that I will be an asset to your team. My education and interests are broadly in AI and cognitive science and specifically in knowledge based systems and machine learning. I am seeking a position that will challenge me to grow as an engineer both technically and socially.
+My name is Chris, and I enjoy gaming nearly as much as engineering. I am a software engineer and data scientist with interests in backend engineering and machine learning, and I love solving tough puzzles. I am naturally curious about every stage of the research and development cycle, and I have experience in frontend, backend, and research. I'm a Unix geek and programming language nerd that's both easy going and a diligent worker. In my free time, I'm a casual Magic player (and Catan, D\&D, ...) and a hobby programmer with a variety of projects on GitHub. I am currently pursuing a masters in Artificial Intelligence at UGA, for which I have completed all course work, and I have previously held multiple internships with companies in and around Atlanta. I am looking for my first full time engineering position.
 
-I am currently a master's student at UGA in Athens. While I will not graduate until the end of summer, I will finish my course requirements by May, after which nothing will be tying me to Athens. I am available to start May 7th.
-
-\lettersection{Why IBM?}
-As a project, Watson hits right at the heart of my interests by using machine learning to bridge the gap between unstructured data and classic knowledge based systems. I understand that the advertising team is now the largest user of Watson APIs. My intent is to get a foot in the door, to gain experience from senior engineers in AI, and to use and contribute back to Watson. The role of knowledge engineer specifically excites me as this first step because it alines well with my existing skills and interests.
+\lettersection{Why TCGPlayer?}
+I was extremely excited when I saw the posting for data engineer in Atlanta. This opportunity has the triple threat of being an engineering position within my area of expertise, being located in my preferred city, and being in a community of my favorite pastimes. For any other opportunity, I'd have to settle for two out of three. Your tech stack seems modern, and your values progressive, both of which are very important to me. This is easily the most exciting opening I've come across.
 
 \lettersection{Why Me?}
-My academic achievements should speak for themselves: I am well decorated with relevant course work across five departments. As an engineer, I am both flexible and talented. I have related work experience from three companies in tech. I am experienced with multiple machine learning and knowledge base stacks including Spark/Hadoop, the PyData stack (e.g. Pandas), and Prolog. And I know a variety of languages across multiple paradigms, which gives me a large toolset and the capacity to quickly learn more. Additionally, I familiar with existing team members, having worked with Peilong at Digital Envoy and studied with Nicholas at UGA.
+This position fits me like a glove. In fact, the challenges of dealing with Magic data is something I've given much thought to in the past. Take card representation for example. Having a well formed representation would be impactful across the board from customer recommendations to price prediction and internal tooling. Using straight card text seems less than ideal because A) much of the text involves symbols outside of standard english, B) that's not very flexible with respect to errata, and C) the game has a formal definition, so a structured representation would more transparently reflect the role cards have within the game. (I would love to learn how TCGPlayer has approached this problem.)
+
+I addition, I am experienced in symbolic programming, and given the formal structure of Magic, it makes perfect sense that TCGPlayer would leverage a symbolic language like Clojure. I have formal experience with Clojure and other LISP dialects, and I am an expert in Prolog (the most popular symbolic language outside of the LISPs). I also have experience working in Spark and Hive for data analysis, and a formal background in SQL. And of course, my master's thesis is in machine learning and data analysis. Not only am I well qualified, I would be excited for the opportunity to interview with TCGPlayer.
 
 \end{cvletter}
 
