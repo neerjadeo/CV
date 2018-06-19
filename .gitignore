@@ -8,6 +8,8 @@
 *.toc
 *.dvi
 *-converted-to.*
+*.fdb_latexmk
+*.synctex.gz
 
 # Atom LaTeX plugin
 .latex
